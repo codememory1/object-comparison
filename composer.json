@@ -1,0 +1,25 @@
+{
+    "name": "codememory/object-comparison",
+    "description": "object comparison",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danil",
+            "email": "kostynd1@gmail.com"
+        }
+    ],
+    "require": {
+        "codememory/attributes": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codememory\\Components\\ObjectComparison\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}
