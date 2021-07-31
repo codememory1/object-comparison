@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "codememory/attributes": "^2.0"
+        "codememory/attributes": "^2.0",
+        "codememory/support": "^1.2"
     },
     "autoload": {
         "psr-4": {

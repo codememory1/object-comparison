@@ -4,6 +4,7 @@ namespace Codememory\Components\ObjectComparison\Traits;
 
 use Codememory\Components\ObjectComparison\ClassComponents\AbstractComponent;
 use Codememory\Components\ObjectComparison\Interfaces\ObjectInformationInterface;
+use Codememory\Support\Arr;
 
 /**
  * Trait TrackersTrait
@@ -163,7 +164,7 @@ trait TrackersTrait
             foreach ($component->getAttributes() as $attribute) {
                 if ($this->existAttribute($attribute->getName(), $componentFromOldObject->getAttributes())) {
                     $componentAttributeFromOldObject = $this->getAttributeByName($attribute->getName(), $componentFromOldObject);
-                    $diffArguments = array_diff_assoc($attribute->getArguments(), $componentAttributeFromOldObject->getArguments());
+                    $diffArguments = Arr::recursiveDifference($attribute->getArguments(), $componentAttributeFromOldObject->getArguments());
 
                     if ([] !== $diffArguments) {
                         $this->comparisonInformation['changes']['attributeArguments'][] = [
