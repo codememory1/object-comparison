@@ -50,6 +50,8 @@ class Test2
 }
 
 $objectComparison = new ObjectComparison(new Test1(), new Test2());
+
+var_dump($objectComparison->getComparisonResult());
 ```
 ## Результат сравнения
 ![Result Comparison](./images/response-comparison.png)
